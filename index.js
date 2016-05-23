@@ -7,14 +7,12 @@ app.get('/', function(req, res){
 	res.sendFile(__dirname + '/public/index.html');
 });
 
-
-io.on('connection', function(socket){
+io.on('connection', function(socket)
+{
 	console.log('Tenemos una nueva victima!!');
-
 	socket.on('chat', function(_msg){
 		io.emit('nuevo_mensaje', _msg);
 	});
-
 });
 
 
