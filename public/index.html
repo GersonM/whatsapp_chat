@@ -6,31 +6,14 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
 	<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
-	<style>
-		#bienvenida
-		{
-			border: 1px solid #CCC;
-			margin: 10px;
-		}
-		#chat
-		{
-			margin: 10px;
-			border: 1px solid #CCC;
-			display: none;
-		}
-	</style>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 	<div id="bienvenida" class="well">
 		<h3>Hola, por favor ingresa tu nombre para entrar al chat</h3>
 		<input type="text" id="nombre" class="form-control">
 		<button onclick="guardarNombre()">Entrar</button>
-		<div
-				class="fb-like"
-				data-share="true"
-				data-width="450"
-				data-show-faces="true">
-		</div>
 	</div>
 
 	<div id="chat" class="well">

@@ -7,20 +7,18 @@ app.get('/', function(req, res){
 	res.sendFile(__dirname + '/public/index.html');
 });
 
+app.use(express.static('public'));
+
+var users = [];
+
 io.on('connection', function(socket)
 {
-	console.log('Tenemos una nueva victima!!');
+	console.log('Nuevo usuario:' + socket.client.id);
+	users[socket.client.id] = 
 	socket.on('chat', function(_msg){
 		io.emit('nuevo_mensaje', _msg);
 	});
 });
-
-
-
-
-
-
-
 
 
 http.listen(8080, function () {
